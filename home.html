@@ -1,52 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <head>'
+    <head>
         <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <script>
-            function computerPlay(){
-                let array=["Rock","Scissors","Paper"]
-                let num=Math.floor(Math.random() * 3); 
-                let cho=array[num]
-                return cho
-            }
-            function playRound(playerSelection, computerSelection) {
-                if(playerSelection=='Rock' && computerSelection=='Paper'){
-                    return 'you lose ! Paper beats Rock'
-                }
-                else if(playerSelection=='Rock' && computerSelection=='Scissors'){
-                    return 'you win ! Rock beats Scissors'
-                }
-                else if(playerSelection=='Rock' && computerSelection=='Rock'){
-                    return 'no one win'
-                }
-                else if(playerSelection=='Paper' && computerSelection=='Paper'){
-                    return 'no one win'
-                }
-                else if(playerSelection=='Paper' && computerSelection=='Rock'){
-                    return 'you win ! Paper beats Rock'
-                }
-                else if(playerSelection=='Paper' && computerSelection=='Scissors'){
-                    return 'you lose ! Scissors beats Paper'
-                }
-                else if(playerSelection=='Scissore' && computerSelection=='Paper'){
-                    return 'you win ! Paper beats Scissore'
-                }
-                else if(playerSelection=='Scissore' && computerSelection=='Rock'){
-                    return 'you lose ! Rock beats Scissore'
-                }
-                else if(playerSelection=='Scissore' && computerSelection=='Scissore'){
-                    return 'no one win'
-                }
-                else {
-                    return 'error , please try again'
-                }
-            }
-            const playerSelection = 'Rock'
-            const computerSelection = computerPlay()
-            console.log(playRound(playerSelection, computerSelection))
-            
-        </script>
+       <p>player score : <span id="score"></span></p>
+       <h2 id="result"></h2>
+       <button id="Rock">Rock</button>
+       <button id="Paper">Paper</button>
+       <button id="Scissors">Scissors</button>
     </body>
+    <script src="script.js"></script>
 </html>
